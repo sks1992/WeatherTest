@@ -9,6 +9,13 @@
         android:orientation="vertical"
         tools:context=".view.WeatherActivity">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textSize="22sp"
+            android:text="@string/please_enter_your_city_lat_and_lan" />
+
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"

@@ -17,10 +17,15 @@ class WeatherActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_weather)
 
         binding.btnSubmit.setOnClickListener {
-            val i = Intent(this, WeatherDataActivity::class.java)
-            i.putExtra("lat", binding.etLat.text)
-            i.putExtra("lon", binding.etLon.text)
-            startActivity(i)
+            println(binding.etLon.text)
+            println(binding.etLat.text)
+//            val i = Intent(this, WeatherDataActivity::class.java)
+//            i.putExtra("lat", binding.etLat.text.)
+//            i.putExtra("lon", binding.etLon.text)
+//            startActivity(i)
+
+
+
         }
     }
 }
