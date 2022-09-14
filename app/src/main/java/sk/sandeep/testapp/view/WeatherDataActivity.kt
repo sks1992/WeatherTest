@@ -87,6 +87,7 @@ class WeatherDataActivity : AppCompatActivity() {
                         binding.dailyWindSpeed.text = it
                     }
                 }
+                else -> {}
             }
         }
     }
