@@ -23,11 +23,12 @@ class WeatherDataActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_weather_data)
 
-        // val intent = getIntent()
-//        val intent = intent
-//        val lat = intent.getStringExtra("lat")!!.toDouble()
-//        val lon = intent.getStringExtra("lon")!!.toDouble()
-        weatherViewModel.showWeatherData(33.44,-94.04)
+        val lat = intent.extras!!.getDouble("lat")
+        val lon = intent.extras!!.getDouble("lon")
+
+        weatherViewModel.showWeatherData(lat, lon)
+        //weatherViewModel.showWeatherData(33.44, -94.04)
+
         bindObservers()
     }
 
@@ -45,10 +46,47 @@ class WeatherDataActivity : AppCompatActivity() {
                 }
                 is Resource.Success -> {
                     binding.progressBar.visibility = View.GONE
-                    binding.tvCity.text =weatherData.data!!.timezone
-                    println()
-                }
+                    ("Timezone :: " + weatherData.data!!.timezone).also { binding.tvCity.text = it }
+                    ("Date Time :: " + weatherData.data.current.dt.toString()).also {
+                        binding.currentDateTime.text = it
+                    }
+                    ("Temperature :: " + weatherData.data.current.temp.toString()).also {
+                        binding.currentTemp.text = it
+                    }
+                    ("Humidity :: " + weatherData.data.current.humidity.toString()).also {
+                        binding.currentHumidity.text = it
+                    }
+                    ("WindSpeed :: " + weatherData.data.current.wind_speed.toString()).also {
+                        binding.currentWindSpeed.text = it
+                    }
 
+                    ("Date Time :: " + weatherData.data.hourly[0].dt.toString()).also {
+                        binding.hourlyDateTime.text = it
+                    }
+                    ("Temperature :: " + weatherData.data.hourly[0].temp.toString()).also {
+                        binding.hourlyTemp.text = it
+                    }
+                    ("Humidity :: " + weatherData.data.hourly[0].humidity.toString()).also {
+                        binding.hourlyHumidity.text = it
+                    }
+                    ("WindSpeed :: " + weatherData.data.hourly[0].wind_speed.toString()).also {
+                        binding.hourlyWindSpeed.text = it
+                    }
+
+
+                    ("Date Time :: " + weatherData.data.daily[0].dt.toString()).also {
+                        binding.dailyDateTime.text = it
+                    }
+                    ("Temperature :: " + weatherData.data.daily[0].temp.day.toString()).also {
+                        binding.dailyTemp.text = it
+                    }
+                    ("Humidity :: " + weatherData.data.daily[0].humidity.toString()).also {
+                        binding.dailyHumidity.text = it
+                    }
+                    ("WindSpeed :: " + weatherData.data.daily[0].wind_speed.toString()).also {
+                        binding.dailyWindSpeed.text = it
+                    }
+                }
             }
         }
     }

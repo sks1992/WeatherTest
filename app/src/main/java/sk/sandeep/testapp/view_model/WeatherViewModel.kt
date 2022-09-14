@@ -11,6 +11,9 @@ import javax.inject.Inject
 class WeatherViewModel @Inject constructor(
     private val weatherRepository: WeatherRepository
 ) : ViewModel() {
+//    val lat: MutableLiveData<Double> by lazy { MutableLiveData<Double>() }
+//    val lon: MutableLiveData<Double> by lazy { MutableLiveData<Double>() }
+
     val getWeatherData get() = weatherRepository.weatherData
 
     fun showWeatherData(lat: Double, lon: Double) {

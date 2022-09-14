@@ -19,13 +19,10 @@ class WeatherActivity : AppCompatActivity() {
         binding.btnSubmit.setOnClickListener {
             println(binding.etLon.text)
             println(binding.etLat.text)
-//            val i = Intent(this, WeatherDataActivity::class.java)
-//            i.putExtra("lat", binding.etLat.text.)
-//            i.putExtra("lon", binding.etLon.text)
-//            startActivity(i)
-
-
-
+            val i = Intent(this, WeatherDataActivity::class.java)
+            i.putExtra("lat", binding.etLat.text.toString().toDouble())
+            i.putExtra("lon", binding.etLon.text.toString().toDouble())
+            startActivity(i)
         }
     }
 }

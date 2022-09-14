@@ -1,7 +1,10 @@
 <resources>
-    <string name="app_name">TestApp</string>
+    <string name="app_name">WeatherApp</string>
     <string name="longitude">Longitude</string>
     <string name="get_data">Get Weather Data</string>
     <string name="latitude">Latitude</string>
     <string name="please_enter_your_city_lat_and_lan">Please Enter Your City lat and lan</string>
+    <string name="current_data">Current Data</string>
+    <string name="hourly_data">Hourly Data</string>
+    <string name="daily_data">Daily Data</string>
 </resources>
