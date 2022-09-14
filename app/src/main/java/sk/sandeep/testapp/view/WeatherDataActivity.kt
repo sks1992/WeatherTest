@@ -24,10 +24,10 @@ class WeatherDataActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_weather_data)
 
         // val intent = getIntent()
-        val intent = intent
-        val lat = intent.getStringExtra("lat")!!.toDouble()
-        val lon = intent.getStringExtra("lon")!!.toDouble()
-        weatherViewModel.showWeatherData(lat,lon)
+//        val intent = intent
+//        val lat = intent.getStringExtra("lat")!!.toDouble()
+//        val lon = intent.getStringExtra("lon")!!.toDouble()
+        weatherViewModel.showWeatherData(33.44,-94.04)
         bindObservers()
     }
 
