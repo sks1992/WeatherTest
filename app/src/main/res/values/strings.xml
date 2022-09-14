@@ -7,4 +7,5 @@
     <string name="current_data">Current Data</string>
     <string name="hourly_data">Hourly Data</string>
     <string name="daily_data">Daily Data</string>
+    <string name="current">Current Data</string>
 </resources>

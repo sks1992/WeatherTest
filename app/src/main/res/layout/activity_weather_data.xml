@@ -42,10 +42,10 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
+                    android:id="@+id/tv_current"
                     android:layout_marginTop="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/current_data"
                     android:textSize="22sp" />
 
                 <TextView
@@ -69,10 +69,10 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
+                    android:id="@+id/tv_hourly"
                     android:layout_marginTop="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/hourly_data"
                     android:textSize="22sp" />
 
                 <TextView
@@ -96,10 +96,10 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
+                    android:id="@+id/tv_daily"
                     android:layout_marginTop="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/daily_data"
                     android:textSize="22sp" />
 
                 <TextView

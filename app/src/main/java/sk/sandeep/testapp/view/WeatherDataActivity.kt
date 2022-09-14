@@ -47,6 +47,8 @@ class WeatherDataActivity : AppCompatActivity() {
                 is Resource.Success -> {
                     binding.progressBar.visibility = View.GONE
                     ("Timezone :: " + weatherData.data!!.timezone).also { binding.tvCity.text = it }
+
+                    binding.tvCurrent.text =getString(R.string.current_data)
                     ("Date Time :: " + weatherData.data.current.dt.toString()).also {
                         binding.currentDateTime.text = it
                     }
@@ -60,6 +62,7 @@ class WeatherDataActivity : AppCompatActivity() {
                         binding.currentWindSpeed.text = it
                     }
 
+                    binding.tvHourly.text =getString(R.string.hourly_data)
                     ("Date Time :: " + weatherData.data.hourly[0].dt.toString()).also {
                         binding.hourlyDateTime.text = it
                     }
@@ -73,7 +76,7 @@ class WeatherDataActivity : AppCompatActivity() {
                         binding.hourlyWindSpeed.text = it
                     }
 
-
+                    binding.tvDaily.text =getString(R.string.daily_data)
                     ("Date Time :: " + weatherData.data.daily[0].dt.toString()).also {
                         binding.dailyDateTime.text = it
                     }
